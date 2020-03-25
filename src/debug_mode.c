@@ -57,6 +57,19 @@ void print_info_key(key_p *key)
         my_printf("No\n");
 }
 
+int take_imput_line(void)
+{
+    char *letter = NULL;
+    int read_c = 0;
+
+    while (letter == NULL) {
+        read_c = read(0, &letter, 1);
+        if (read_c >= 1)
+            break;
+    }
+    return (0);
+}
+
 void print_debug_mode(trimino_d *mino, key_p *key)
 {
     my_printf("*** DEBUG MODE ***\n");
@@ -75,5 +88,6 @@ void print_debug_mode(trimino_d *mino, key_p *key)
                 my_printf("%s\n", cur->triminos[i]);
         }
     }
-    my_printf("Press any key to start Tetris\n");
+    my_printf("Press any key to start Tetris");
+    take_imput_line();
 }

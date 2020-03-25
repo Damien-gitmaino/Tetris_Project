@@ -27,18 +27,19 @@ char **fill_map(char **map, int line, int colum)
     return (map);
 }
 
-void init_map(info_g *info, int line, int colum)
+char **init_map(int line, int colum)
 {
-    info->map = malloc(sizeof(char *) * (line + 2) + 1);
+    char **map = malloc(sizeof(char *) * (line + 2) + 1);
 
-    if (info->map == NULL)
+    if (map == NULL)
         exit (84);
-    info->map[line + 2] = NULL;
+    map[line + 2] = NULL;
     for (int i = 0; i < line + 2; i++) {
-        info->map[i] = malloc(sizeof(char) * (colum + 2) + 1);
-        if (info->map[i] == NULL)
+        map[i] = malloc(sizeof(char) * (colum + 2) + 1);
+        if (map[i] == NULL)
             exit (84);
-        info->map[i][colum + 2] = '\0';
+        map[i][colum + 2] = '\0';
     }
-    info->map = fill_map(info->map, line, colum);
+    map = fill_map(map, line, colum);
+    return (map);
 }

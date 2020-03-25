@@ -15,7 +15,9 @@ SRCS =	./src/main.c \
 		./src/parsing/fct_flag_info_bis.c \
 		./src/parsing/fct_flag_info.c \
 		./src/parsing/fct_flag.c \
-		./src/parsing/ges_flag.c
+		./src/parsing/ges_flag.c \
+		./src/game/game_loop.c \
+		./src/ges_map/create_map.c
 
 LIBPATH = ./lib/my/
 
@@ -27,7 +29,7 @@ RM = rm -f
 
 LIBFLAGS = -L lib/my -lmy
 
-CFLAGS = -g -W -Wall -Wextra -I include/ -Ilib/my/
+CFLAGS = -g -W -Wall -Wextra -I include/ -Ilib/my/ -lncurses
 
 all : $(NAME)
 

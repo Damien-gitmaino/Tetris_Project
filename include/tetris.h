@@ -22,6 +22,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <getopt.h>
+#include <ncurses.h>
 #include "my.h"
 
 /*---struct_tetris_mino---*/
@@ -71,8 +72,11 @@ char *readapting_str(char *str);
 void init_well_tetris_mode(trimino_d *cur, char *file, char *str);
 void init_wrong_tetris_node(trimino_d *cur, char *file);
 
+/*----------map----------*/
+void game_loop(key_p *key, trimino_d *mino);
+
 /*--------ges_map--------*/
-//void init_map(info_g *info, int line, int colum);
+char **init_map(int line, int colum);
 
 /*---------flags---------*/
 int recup_char_key(char *str);

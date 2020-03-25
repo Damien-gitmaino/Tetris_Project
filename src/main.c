@@ -16,5 +16,6 @@ int main(int ac, char **av)
     open_floder(mino);
     if (indic == 1)
         print_debug_mode(mino, &key);
+    game_loop(&key, mino);
     return (0);
 }

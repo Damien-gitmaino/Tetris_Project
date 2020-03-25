@@ -25,7 +25,7 @@ arg_inp key_arg[] = {
 
 int help(key_p *key, char *str)
 {
-    my_printf("Usage: ./tetris [options]\nOptions:\n --help\t\t\tDisplay ");
+    my_printf("Usage: ./tetris [options]\nOptions:\n --help\tDisplay ");
     my_printf("this help\n -L --level={num}\tStart Tetris at level num");
     my_printf(" (def: 1)\n -l --key-left={K}\tMove the tetrimino LEFT ");
     my_printf("using the K key (def: left arrow)\n -r --key-right={K}\t");
@@ -38,7 +38,7 @@ int help(key_p *key, char *str)
     my_printf(" the game using the K key (def: space bar)\n ");
     my_printf("--map-size={row,col}\tSet the numbers of rows and");
     my_printf(" columns of the map (def: 20,10)\n -w --without-next\t");
-    my_printf("Hide next tetrimino (def: false)\n -D --debug\t\t");
+    my_printf("Hide next tetrimino (def: false)\n -D --debug\t");
     my_printf("Debug mode (def: false)\n");
     exit (0);
 }
